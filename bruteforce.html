@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brute Force Attacks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Ethical Hacking Guide</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="ssh.html">SSH</a></li>
+        <li><a href="nmap.html">Nmap</a></li>
+        <li><a href="wireshark.html">Wireshark</a></li>
+        <li><a href="hydra.html">Hydra</a></li>
+        <li><a href="bruteforce.html">Brute Force</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Brute-Force Attacks</h2>
+
+    <div class="section">
+        <h3>What is a Brute-Force Attack?</h3>
+        <p>
+            A brute-force attack is a method where every possible password combination is tried until the correct one is found.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Brute Force vs Dictionary Attack</h3>
+        <p>
+            A brute-force attack tries every possible combination, which can take a long time.
+            A dictionary attack uses a list of common passwords, making it faster but less thorough.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Example in a Penetration Test</h3>
+        <p>
+            During a penetration test, a tester might use a tool like Hydra to check if a system has weak passwords.
+            If a simple password is found, it shows that the system is vulnerable.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Defenses</h3>
+        <ul>
+            <li>Account lockouts</li>
+            <li>Rate limiting</li>
+            <li>Multi-factor authentication</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>What a Finding Looks Like</h3>
+        <p>
+            If a tester successfully guesses a password, they would report it as a vulnerability.
+            The risk is that an attacker could gain access to the system. The recommendation would be to enforce
+            stronger passwords and add protections like MFA.
+        </p>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
