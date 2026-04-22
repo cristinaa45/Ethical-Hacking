@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Wireshark</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,47 +19,44 @@
     </ul>
 </nav>
 
+<button onclick="toggleMode()">Toggle Mode</button>
+
 <main>
-    <h2>Wireshark — Packet Analyzer</h2>
+<h2>Wireshark — Packet Analyzer</h2>
 
-    <div class="section">
-        <h3>What is a Packet?</h3>
-        <p>
-            A packet is a small piece of data sent across a network. You can think of it like a letter in the mail.
-            Each packet contains information like who sent it, where it’s going, and the actual message inside.
-        </p>
-    </div>
+<div class="section">
+<h3>What is a Packet?</h3>
+<p>
+A <span class="highlight">packet</span> is a small piece of data sent across a network.
+Think of it like a <b>digital envelope</b> carrying information from one computer to another.
+</p>
+</div>
 
-    <div class="section">
-        <h3>What Wireshark Does</h3>
-        <p>
-            Wireshark captures and displays network traffic in real time. It lets you see every packet moving across
-            a network, which is useful for analyzing how systems communicate and spotting suspicious activity.
-        </p>
-    </div>
+<div class="section">
+<h3>What Wireshark Does</h3>
+<p>
+Wireshark lets you <span class="highlight">capture and inspect network traffic</span> in real time.
+You can see exactly what devices are sending and receiving.
+</p>
+</div>
 
-    <div class="section">
-        <h3>Why This Matters in Security</h3>
-        <p>
-            During a security investigation, Wireshark can reveal sensitive data being transmitted over the network.
-            If traffic is not encrypted, an attacker could read it.
-        </p>
-    </div>
+<div class="section">
+<h3>Security Use</h3>
+<p>
+During a security test, Wireshark can reveal <b>passwords, messages, or sensitive data</b>
+if they are not encrypted.
+</p>
+</div>
 
-    <div class="section">
-        <h3>Example: Unencrypted Login</h3>
-        <p>
-            If a user logs into a website using HTTP instead of HTTPS, their username and password are sent in plain text.
-            Wireshark can capture that packet and display the login information.
-        </p>
+<div class="section">
+<h3>Example: HTTP Login</h3>
+<p>
+If a user logs in using <span class="highlight">HTTP (not HTTPS)</span>, the login data is sent in plain text.
+An attacker could capture it and read the username and password.
+</p>
+</div>
 
-        <p>
-            This is why secure websites use HTTPS — it encrypts the data so even if someone captures the packet,
-            they cannot read the contents.
-        </p>
-    </div>
 </main>
-
 <script src="script.js"></script>
 </body>
 </html>
