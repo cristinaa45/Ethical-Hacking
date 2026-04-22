@@ -1,13 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h1>Ethical Hacking Guide</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="ssh.html">SSH</a></li>
+        <li><a href="nmap.html">Nmap</a></li>
+        <li><a href="wireshark.html">Wireshark</a></li>
+        <li><a href="hydra.html">Hydra</a></li>
+        <li><a href="bruteforce.html">Brute Force</a></li>
+    </ul>
+</nav>
+
+<button onclick="toggleMode()">Toggle Mode</button>
+
+<main>
+
+<h2>Nmap — Network Scanner</h2>
+
+<div class="section">
+<h3>What is Nmap?</h3>
+<p>
+<span class="highlight">Nmap</span> is a tool used to scan networks and discover what devices
+and services are running. This process is called <b>network scanning</b>.
+</p>
+</div>
+
+<div class="section">
+<h3>What Are Ports?</h3>
+<p>
+<span class="highlight">Ports</span> are like <b>doors into a system</b>. Each port is used by a specific service.
+</p>
+
+<p>
+If a port is <b>open</b>, it means something is running and accepting connections.
+This could be useful for legitimate access — or a potential entry point for an attacker.
+</p>
+</div>
+
+<div class="section">
+<h3>Command Example</h3>
+
 <code>
 nmap -sV 192.168.1.0/24
 </code>
 
-<pre>
+<p>
+<b>-sV</b> = detects service versions<br>
+<b>192.168.1.0/24</b> = scans all devices on the network
+</p>
+
+</div>
+
+<div class="section">
+<h3>Sample Output</h3>
+
+<code>
 22/tcp open ssh
 80/tcp open http
-</pre>
+</code>
 
 <p>
-Ports are like doors into a system. Open ports show what services are running.
-If a port is open, it might be a way into the system.
+<b>Port 22 (SSH)</b> → remote access service<br>
+<b>Port 80 (HTTP)</b> → web server
 </p>
+
+<p>
+If these ports are open, it means those services are running and could be tested
+for vulnerabilities during a penetration test.
+</p>
+
+</div>
+
+<div class="section">
+<h3>Why This Matters</h3>
+<p>
+Nmap helps security testers <span class="highlight">map out a target system</span>.
+Knowing which ports are open shows where to focus further testing.
+</p>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
