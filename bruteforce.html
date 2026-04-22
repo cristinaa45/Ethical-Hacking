@@ -5,6 +5,7 @@
     <title>Brute Force Attacks</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
@@ -20,49 +21,80 @@
     </ul>
 </nav>
 
+<button onclick="toggleMode()">Toggle Mode</button>
+
 <main>
-    <h2>Brute-Force Attacks</h2>
 
-    <div class="section">
-        <h3>What is a Brute-Force Attack?</h3>
-        <p>
-            A brute-force attack is a method where every possible password combination is tried until the correct one is found.
-        </p>
-    </div>
+<h2>Brute-Force Attacks</h2>
 
-    <div class="section">
-        <h3>Brute Force vs Dictionary Attack</h3>
-        <p>
-            A brute-force attack tries every possible combination, which can take a long time.
-            A dictionary attack uses a list of common passwords, making it faster but less thorough.
-        </p>
-    </div>
+<div class="section">
+<h3>What is a Brute-Force Attack?</h3>
+<p>
+A <span class="highlight">brute-force attack</span> is a <b>method</b> where every possible password 
+combination is tried until the correct one is found.
+</p>
 
-    <div class="section">
-        <h3>Example in a Penetration Test</h3>
-        <p>
-            During a penetration test, a tester might use a tool like Hydra to check if a system has weak passwords.
-            If a simple password is found, it shows that the system is vulnerable.
-        </p>
-    </div>
+<p>
+This is not a specific tool — it is a strategy that tools like Hydra can perform.
+</p>
+</div>
 
-    <div class="section">
-        <h3>Defenses</h3>
-        <ul>
-            <li>Account lockouts</li>
-            <li>Rate limiting</li>
-            <li>Multi-factor authentication</li>
-        </ul>
-    </div>
+<div class="section">
+<h3>Brute Force vs Dictionary Attack</h3>
+<p>
+<b>Brute-force attack:</b> tries <span class="highlight">every possible combination</span>, 
+which can take a long time but is very thorough.
+</p>
 
-    <div class="section">
-        <h3>What a Finding Looks Like</h3>
-        <p>
-            If a tester successfully guesses a password, they would report it as a vulnerability.
-            The risk is that an attacker could gain access to the system. The recommendation would be to enforce
-            stronger passwords and add protections like MFA.
-        </p>
-    </div>
+<p>
+<b>Dictionary attack:</b> uses a <span class="highlight">wordlist of common passwords</span>, 
+making it faster but less complete.
+</p>
+</div>
+
+<div class="section">
+<h3>Example in a Penetration Test</h3>
+<p>
+During a penetration test, a tester might use Hydra to test login systems for weak passwords.
+</p>
+
+<p>
+If a simple password like <b>"admin123"</b> is found quickly, it shows the system is vulnerable 
+to credential attacks.
+</p>
+</div>
+
+<div class="section">
+<h3>Defenses Against Brute-Force Attacks</h3>
+<ul>
+<li><b>Account lockouts</b> after multiple failed attempts</li>
+<li><b>Rate limiting</b> to slow down login attempts</li>
+<li><b>Multi-factor authentication (MFA)</b> for extra security</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>What a Security Finding Looks Like</h3>
+<p>
+If a tester successfully guesses a password, it is reported as a 
+<span class="highlight">security vulnerability</span>.
+</p>
+
+<p>
+The risk is <b>unauthorized access</b> to systems or data.
+</p>
+
+<p>
+The recommendation would be:
+</p>
+
+<ul>
+<li>Enforce stronger passwords</li>
+<li>Enable MFA</li>
+<li>Limit login attempts</li>
+</ul>
+</div>
+
 </main>
 
 <script src="script.js"></script>
