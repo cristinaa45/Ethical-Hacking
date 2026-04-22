@@ -1,9 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h1>Ethical Hacking Guide</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="ssh.html">SSH</a></li>
+        <li><a href="nmap.html">Nmap</a></li>
+        <li><a href="wireshark.html">Wireshark</a></li>
+        <li><a href="hydra.html">Hydra</a></li>
+        <li><a href="bruteforce.html">Brute Force</a></li>
+    </ul>
+</nav>
+
+<button onclick="toggleMode()">Toggle Mode</button>
+
+<main>
+
+<h2>SSH — Secure Shell</h2>
+
+<div class="section">
+<h3>What is SSH?</h3>
+<p>
+<span class="highlight">SSH (Secure Shell)</span> is a protocol that allows you to connect to another computer
+over a network <b>securely</b>. It encrypts the connection so data cannot be easily intercepted.
+</p>
+
+<p>
+Before SSH, tools like Telnet sent data in plain text, which made it easy for attackers to steal information.
+SSH solves this problem by using encryption.
+</p>
+</div>
+
+<div class="section">
+<h3>What You Can Do with SSH</h3>
+<p>
+Once connected, you can control the remote system as if you were sitting in front of it.
+</p>
+
+<ul>
+<li>Run commands</li>
+<li>Access files</li>
+<li>Manage system settings</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>Command Example</h3>
+
 <code>
 ssh student@192.168.1.100
 </code>
 
 <p>
-ssh = the protocol used for secure remote access<br>
-student = username<br>
-192.168.1.100 = target machine IP
+<b>ssh</b> = the protocol used for secure remote access<br>
+<b>student</b> = username on the target system<br>
+<b>192.168.1.100</b> = IP address of the target machine
 </p>
+
+</div>
+
+<div class="section">
+<h3>Why This Matters in Ethical Hacking</h3>
+<p>
+During a penetration test, a tester might use a tool like Nmap to find a system,
+then connect to it using SSH if credentials are known or discovered.
+</p>
+
+<p>
+This allows the tester to <span class="highlight">investigate the system from the inside</span>.
+</p>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
