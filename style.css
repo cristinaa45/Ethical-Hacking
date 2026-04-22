@@ -1,52 +1,114 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #0f172a;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #0f172a, #020617);
     color: #e2e8f0;
 }
 
+/* NAVBAR */
 nav {
     background: #020617;
-    padding: 15px;
-    border-bottom: 2px solid #38bdf8;
+    padding: 20px;
+    border-bottom: 3px solid #38bdf8;
+    text-align: center;
 }
 
 nav h1 {
     margin: 0;
     color: #38bdf8;
+    font-size: 28px;
 }
 
 nav ul {
-    list-style: none;
+    margin-top: 10px;
     padding: 0;
 }
 
 nav li {
     display: inline;
-    margin-right: 15px;
+    margin: 0 12px;
 }
 
 nav a {
     color: #e2e8f0;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-main {
-    padding: 20px;
-}
-
-code {
-    background: #1e293b;
-    padding: 10px;
-    display: block;
-    margin: 10px 0;
+/* BUTTON */
+button {
+    margin: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
 }
 
+button:hover {
+    background: #0ea5e9;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* HEADINGS */
+h2 {
+    color: #38bdf8;
+    font-size: 32px;
+}
+
+h3 {
+    color: #7dd3fc;
+    font-size: 22px;
+}
+
+/* SECTIONS */
 .section {
-    margin-bottom: 30px;
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* CODE BLOCK */
+code {
+    display: block;
+    background: black;
+    color: lime;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+/* BOLD HIGHLIGHTS */
+.highlight {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* LIGHT MODE */
+.light {
+    background: white;
+    color: black;
+}
+
+.light nav {
+    background: #ddd;
+}
+
+.light .section {
+    background: #f1f5f9;
 }
