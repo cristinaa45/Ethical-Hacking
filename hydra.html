@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hydra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Ethical Hacking Guide</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="ssh.html">SSH</a></li>
+        <li><a href="nmap.html">Nmap</a></li>
+        <li><a href="wireshark.html">Wireshark</a></li>
+        <li><a href="hydra.html">Hydra</a></li>
+        <li><a href="bruteforce.html">Brute Force</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Hydra — Credential Brute-Force Tool</h2>
+
+    <div class="section">
+        <h3>What Hydra Does</h3>
+        <p>
+            Hydra is a tool used to test usernames and passwords by trying many combinations automatically.
+            Security testers use it to find weak credentials on systems they are authorized to test.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>What is a Wordlist?</h3>
+        <p>
+            A wordlist is a file that contains a list of possible passwords. Hydra uses this list to try each password
+            one by one until it finds the correct one.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Example Command</h3>
+
+        <code>
+hydra -l admin -P rockyou.txt ssh://192.168.1.50
+        </code>
+
+        <p>
+            -l admin → the username being tested<br>
+            -P rockyou.txt → the list of passwords to try<br>
+            ssh://192.168.1.50 → the target system and protocol
+        </p>
+
+        <p>
+            If Hydra finds the correct password, it will display it in the output.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>⚠️ Ethics and Legality</h3>
+        <p>
+            Running Hydra against a system without permission is illegal. It is considered unauthorized access and can
+            lead to serious consequences, including fines or criminal charges.
+        </p>
+
+        <p>
+            Ethical hackers only use Hydra when they have explicit permission from the system owner.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Defenses Against Brute-Force Attacks</h3>
+        <ul>
+            <li>Account lockouts after multiple failed attempts</li>
+            <li>Rate limiting to slow down login attempts</li>
+            <li>Multi-factor authentication (MFA)</li>
+        </ul>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
