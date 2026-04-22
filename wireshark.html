@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wireshark</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Ethical Hacking Guide</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cli.html">CLI</a></li>
+        <li><a href="ssh.html">SSH</a></li>
+        <li><a href="nmap.html">Nmap</a></li>
+        <li><a href="wireshark.html">Wireshark</a></li>
+        <li><a href="hydra.html">Hydra</a></li>
+        <li><a href="bruteforce.html">Brute Force</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Wireshark — Packet Analyzer</h2>
+
+    <div class="section">
+        <h3>What is a Packet?</h3>
+        <p>
+            A packet is a small piece of data sent across a network. You can think of it like a letter in the mail.
+            Each packet contains information like who sent it, where it’s going, and the actual message inside.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>What Wireshark Does</h3>
+        <p>
+            Wireshark captures and displays network traffic in real time. It lets you see every packet moving across
+            a network, which is useful for analyzing how systems communicate and spotting suspicious activity.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Why This Matters in Security</h3>
+        <p>
+            During a security investigation, Wireshark can reveal sensitive data being transmitted over the network.
+            If traffic is not encrypted, an attacker could read it.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Example: Unencrypted Login</h3>
+        <p>
+            If a user logs into a website using HTTP instead of HTTPS, their username and password are sent in plain text.
+            Wireshark can capture that packet and display the login information.
+        </p>
+
+        <p>
+            This is why secure websites use HTTPS — it encrypts the data so even if someone captures the packet,
+            they cannot read the contents.
+        </p>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
